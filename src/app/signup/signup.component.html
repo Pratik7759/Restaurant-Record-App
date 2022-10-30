@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Restaurant Signup</h1>
+
+          <h5>❤️ Get Free Membership ❤️</h5>
+          <hr />
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input
+              type="text"
+              formControlName="name"
+              placeholder="Enter Name"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <span
+              style="color: darkred"
+              *ngIf="name && name.invalid && name.touched"
+              >Please Enter Valid Name</span
+            >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mobile Number</label>
+            <input
+              type="number"
+              formControlName="mobile"
+              placeholder="Enter Mobile No."
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <span
+              style="color: darkred"
+              *ngIf="mobile && mobile.invalid && mobile.touched"
+              >Please Enter Valid Number</span
+            >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email Id</label>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Enter Email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <span
+              style="color: darkred"
+              *ngIf="email && email.invalid && email.touched"
+              >Please Enter Valid email</span
+            >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Enter Password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+            <span
+              style="color: darkred"
+              *ngIf="password && password.invalid && password.touched"
+              >Please Enter Valid Password</span
+            >
+          </div>
+
+          <button
+            type="submit"
+            [disabled]="signupForm.invalid"
+            class="btn btn-primary"
+          >
+            Signup
+          </button>
+        </form>
+        <a style="color: darkblue; margin-top: 10px" routerLink="/login"
+          >Already Member? Click to Login !</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

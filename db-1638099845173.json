@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 39,
+      "name": "pratik mishra",
+      "email": "pratik@gmail.com",
+      "mobile": 7759075757,
+      "address": "nai basti",
+      "services": "coffee"
+    },
+    {
+      "id": 40,
+      "name": "ankur",
+      "email": "ankur@gmail.com",
+      "mobile": 1234567,
+      "address": "bhopal",
+      "services": "pizza"
+    }
+  ],
+  "signup": [
+    {
+      "name": "pratik mishra",
+      "mobile": 7759075757,
+      "email": "pratik@",
+      "password": null,
+      "id": 1
+    },
+    {
+      "name": "pratik mishra",
+      "mobile": 7759075757,
+      "email": "pratik@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "name": "anshu",
+      "mobile": 4743884894,
+      "email": "anshu@gmail.com",
+      "password": "123456789",
+      "id": 3
+    },
+    {
+      "name": "ankur ",
+      "mobile": 1234567,
+      "email": "ankur@gmail.com",
+      "password": "12345",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

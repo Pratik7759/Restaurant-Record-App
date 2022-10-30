@@ -1,0 +1,272 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2>Restaurant Record App</h2>
+    <div class="d-flex">
+      <button
+        type="button"
+        (click)="clickAddResto()"
+        class="btn btn-success"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Add Restaurent
+      </button>
+    </div>
+  </div>
+</nav>
+<!--Now i am using jumbotron-->
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Restaurant Record Management</h1>
+    <p class="col-md-8 fs-4">You can save Record of Restaurent</p>
+    <a
+      class="btn btn-success btn-lg"
+      type="button"
+      target="blank"
+      href="https://youtube.com/playlist?list=PL8p2I9GklV45--5t7_N4lveUI6Y31vQ6C"
+      >Angular</a
+    >
+  </div>
+</div>
+<!--close jumbotron-->
+
+<!-- we are going to show table here -->
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">Restaurent ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Address</th>
+      <th scope="col">Service</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of allRestarantData">
+      <td>{{ data.id }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.mobile }}</td>
+      <td>{{ data.address }}</td>
+      <td>{{ data.services }}</td>
+
+      <td>
+        <button type="button" class="btn btn-info" (click)="onEditResto(data)">
+          Edit</button
+        >&nbsp;
+
+        <!-- <button type="button" class="btn btn-info" data-bs-toggle=""  (click)="onEditResto(data)">Edit</button>&nbsp; -->
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteResto1(data)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div
+  class="modal fade"
+  id="exampleModal1"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">
+          Restaurent Record Form
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue1">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input
+              type="text"
+              formControlName="name_val"
+              class="form-control"
+              placeholder="Restaurent Name"
+              id="exampleInputEmail1"
+              value="{{ edit_data.name }}"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Emai Id</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Restaurent Email Id"
+              id="exampleInputEmail1"
+              value="{{ edit_data.email }}"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Mobile</label>
+            <input
+              type="number"
+              value="{{ edit_data.mobile }}"
+              class="form-control"
+              placeholder="Restaurent Mobile Number"
+              id="exampleInputEmail1"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input
+              type="text"
+              value="{{ edit_data.address }}"
+              class="form-control"
+              placeholder="Restaurent Address"
+              id="exampleInputEmail1"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Services</label>
+            <input
+              type="text"
+              formControlName="servicesa"
+              class="form-control"
+              placeholder="Restaurent Services like chai & coffee"
+              id="exampleInputEmail1"
+              value="{{ edit_data.services }}"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          (click)="save_info()"
+        >
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="save_info()">
+          Save Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Restaurent Record Form
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              placeholder="Restaurent Name"
+              id="exampleInputEmail1"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Emai Id</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="Restaurent Email Id"
+              id="exampleInputEmail1"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Mobile</label>
+            <input
+              type="number"
+              formControlName="mobile"
+              class="form-control"
+              placeholder="Restaurent Mobile Number"
+              id="exampleInputEmail1"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input
+              type="text"
+              formControlName="address"
+              class="form-control"
+              placeholder="Restaurent Address"
+              id="exampleInputEmail1"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Services</label>
+            <input
+              type="text"
+              formControlName="services"
+              class="form-control"
+              placeholder="Restaurent Services like chai & coffee"
+              id="exampleInputEmail1"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+          Clear
+        </button>
+        <button
+          type="button"
+          *ngIf="showbtn"
+          class="btn btn-success"
+          (click)="updateResto()"
+        >
+          update Details
+        </button>
+        <button
+          type="button"
+          *ngIf="showAdd"
+          class="btn btn-primary"
+          (click)="addResto()"
+        >
+          Add Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

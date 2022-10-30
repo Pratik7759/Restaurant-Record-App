@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "test",
+      "email": "test@gmail.com",
+      "mobile": 8108265768,
+      "address": "",
+      "services": "chai"
+    },
+    {
+      "id": 5,
+      "name": "pratik mishra",
+      "email": "pratik2001@gmail.com",
+      "mobile": 9771269240,
+      "address": null,
+      "services": "coffee"
+    },
+    {
+      "id": 6,
+      "name": "anshu",
+      "email": "anshu@gmail.com",
+      "mobile": 7070354679,
+      "address": "",
+      "services": "juice"
+    },
+    {
+      "id": 7,
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "address": "",
+      "services": ""
+    },
+    {
+      "id": 8,
+      "name": "shalu",
+      "email": "shalu@gmail.com",
+      "mobile": 8794735679,
+      "address": "nai basti siwan , Bihar",
+      "services": "noodles"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

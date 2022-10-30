@@ -1,0 +1,98 @@
+{
+  "posts": [
+    {
+      "id": 40,
+      "name": "ankur",
+      "email": "ankur@gmail.com",
+      "mobile": 1234567,
+      "address": "bhopal",
+      "services": "pizza"
+    },
+    {
+      "id": 41,
+      "name": "pratik mishra",
+      "email": "pratik@gmail.com",
+      "mobile": 7759075757,
+      "address": "nai basti",
+      "services": "coffee"
+    },
+    {
+      "id": 42,
+      "name": "puskal  mishra",
+      "email": "puskal@gmail.com",
+      "mobile": 6204068738,
+      "address": "siwan",
+      "services": "samosa"
+    },
+    {
+      "id": 43,
+      "name": "kartik katiyar",
+      "email": "kartik@gmail.com",
+      "mobile": 8177008997,
+      "address": "kanpur",
+      "services": "omlette"
+    }
+  ],
+  "signup": [
+    {
+      "name": "pratik mishra",
+      "mobile": 7759075757,
+      "email": "pratik@",
+      "password": null,
+      "id": 1
+    },
+    {
+      "name": "pratik mishra",
+      "mobile": 7759075757,
+      "email": "pratik@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "name": "anshu",
+      "mobile": 4743884894,
+      "email": "anshu@gmail.com",
+      "password": "123456789",
+      "id": 3
+    },
+    {
+      "name": "ankur ",
+      "mobile": 1234567,
+      "email": "ankur@gmail.com",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "name": "kartik",
+      "mobile": 6557876689,
+      "email": "kartik@gmail.com",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "name": "sudesh",
+      "mobile": null,
+      "email": "sudesh@gmail.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "mobile": 565657578,
+      "email": "test@gmail.com",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "name": "pratik mishra",
+      "mobile": 74748484,
+      "email": "pratik@gmail.com",
+      "password": "12345",
+      "id": 8
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
